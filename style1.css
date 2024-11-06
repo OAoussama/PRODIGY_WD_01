@@ -1,0 +1,59 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+  }
+  
+  #navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    top: 0;
+    transition: background-color 0.3s;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar ul li {
+    margin: 0 15px;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+  }
+  
+  #navbar ul li a:hover {
+    color: yellow;
+  }
+  
+  .scrolled {
+    background-color: #340dab !important;
+  }
+  section { 
+    margin-top: 90px; /* Adjust this value if necessary to match the height of your navbar */ 
+    padding: 20px;
+    transition: background-color 0.3s; /* Smooth transition effect */ 
+  }
+ section { margin: 80px 20px; /* Adds space around each section */
+     padding: 30px; 
+     border: 1px solid #ddd; 
+     border-radius: 10px; /* Adds rounded corners */
+      background-color: #686565;
+      transition: background-color 0.3s; /* Smooth transition effect */  
+    }
+    section:hover { 
+        background-color: #e0e0e0; /* Change this to your desired hover color */
+       }
