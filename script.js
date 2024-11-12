@@ -1,15 +1,18 @@
 // script.js
+
 window.addEventListener('scroll', function() {
     var navbar = document.getElementById('navbar');
     var sections = document.querySelectorAll('section');
     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
+    // Add or remove the 'scrolled' class for the navbar
     if (scrollPosition > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 
+    // Highlight the active section in the navbar and adjust the indicator
     sections.forEach(function(section) {
         var sectionTop = section.offsetTop - navbar.offsetHeight;
         var sectionHeight = section.clientHeight;
@@ -29,6 +32,12 @@ window.addEventListener('scroll', function() {
             var navbarRect = navbar.getBoundingClientRect();
             indicator.style.width = linkRect.width + 'px';
             indicator.style.left = (linkRect.left - navbarRect.left) + 'px';
+        }
+
+        // Check if the section is in view and add the fade-in effect
+        var contentBlock = section.querySelector('.content-block');
+        if (scrollPosition >= sectionTop - window.innerHeight * 0.8) {
+            contentBlock.classList.add('fade-in');
         }
     });
 });

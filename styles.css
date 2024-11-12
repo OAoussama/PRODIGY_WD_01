@@ -8,6 +8,10 @@ body {
     background-color: #87CEFA;
     font-family: Arial, Helvetica, sans-serif;
 }
+body h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
 
 #navbar {
     position: fixed;
@@ -132,6 +136,7 @@ section:first-of-type {
     background-color: #FFD700;
     border-radius: 4px;
     transition: all 0.3s ease;
+    
 }
 
 .content-block {
@@ -144,6 +149,14 @@ section:first-of-type {
     /* Adjust as needed */
     max-width: 1200px;
     /* Optional: Max width for the content block */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Initial position for the slide-in effect */
+    transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Slide into position */
 }
 
 .text-block {
